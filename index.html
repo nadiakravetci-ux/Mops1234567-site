@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0B0B10">
+  <meta name="description" content="TikTok-канал mops1234567 — короткие видео, после которых хочется ещё.">
+  <title>mops1234567 — TikTok</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#0B0B10; --panel:#16161F; --line:#2A2A38; --white:#FFFFFF; --muted:#B8B8C6; --soft:#E6E6EC; --accent:#25F4EE; --pink:#FE2C55; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--bg); color:var(--white); font-family:'Space Grotesk',Arial,sans-serif; }
+    a { text-decoration:none; }
+    a.btn:hover { transform:translateY(-2px); }
+    button { font-family:inherit; }
+    .numbtn { transition:transform .15s; }
+    .numbtn:hover { transform:scale(1.08); }
+    .numbtn:active { transform:scale(.9); }
+    @keyframes numA { 0%{opacity:0;transform:scale(.3) rotate(-14deg)} 60%{opacity:1;transform:scale(1.15) rotate(4deg)} 100%{opacity:1;transform:scale(1) rotate(0)} }
+    @keyframes numB { 0%{opacity:0;transform:scale(.3) rotate(-14deg)} 60%{opacity:1;transform:scale(1.15) rotate(4deg)} 100%{opacity:1;transform:scale(1) rotate(0)} }
+    @keyframes upA { 0%{opacity:0;transform:translateY(28px)} 100%{opacity:1;transform:translateY(0)} }
+    @keyframes upB { 0%{opacity:0;transform:translateY(28px)} 100%{opacity:1;transform:translateY(0)} }
+    @keyframes fadeA { 0%{opacity:0} 100%{opacity:1} }
+    @keyframes fadeB { 0%{opacity:0} 100%{opacity:1} }
+    @keyframes btnA { 0%{transform:scale(.8)} 50%{transform:scale(1.2)} 100%{transform:scale(1)} }
+    @keyframes btnB { 0%{transform:scale(.8)} 50%{transform:scale(1.2)} 100%{transform:scale(1)} }
+    @keyframes floatY { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+    @keyframes gameIn { 0%{opacity:0;transform:translateY(40px) scale(.9)} 100%{opacity:1;transform:translateY(0) scale(1)} }
+    @keyframes chompA { 0%{transform:scale(1)} 30%{transform:scale(1.15,.88)} 60%{transform:scale(.92,1.1)} 100%{transform:scale(1)} }
+    @keyframes chompB { 0%{transform:scale(1)} 30%{transform:scale(1.15,.88)} 60%{transform:scale(.92,1.1)} 100%{transform:scale(1)} }
+    @keyframes flyA { 0%{opacity:1;transform:translate(0,120px) rotate(0) scale(1)} 80%{opacity:1;transform:translate(0,10px) rotate(200deg) scale(.7)} 100%{opacity:0;transform:translate(0,0) rotate(240deg) scale(.4)} }
+    @keyframes flyB { 0%{opacity:1;transform:translate(0,120px) rotate(0) scale(1)} 80%{opacity:1;transform:translate(0,10px) rotate(200deg) scale(.7)} 100%{opacity:0;transform:translate(0,0) rotate(240deg) scale(.4)} }
+    @keyframes dance { 0%,100%{transform:rotate(-6deg)} 50%{transform:rotate(6deg) translateY(-12px)} }
+    @keyframes burst1 { to{opacity:0;transform:translate(130px,0) scale(.3)} }
+    @keyframes burst2 { to{opacity:0;transform:translate(92px,92px) scale(.3)} }
+    @keyframes burst3 { to{opacity:0;transform:translate(0,130px) scale(.3)} }
+    @keyframes burst4 { to{opacity:0;transform:translate(-92px,92px) scale(.3)} }
+    @keyframes burst5 { to{opacity:0;transform:translate(-130px,0) scale(.3)} }
+    @keyframes burst6 { to{opacity:0;transform:translate(-92px,-92px) scale(.3)} }
+    @keyframes burst7 { to{opacity:0;transform:translate(0,-130px) scale(.3)} }
+    @keyframes burst8 { to{opacity:0;transform:translate(92px,-92px) scale(.3)} }
+    @keyframes spinA { 0%{transform:rotate(0) scale(1)} 50%{transform:rotate(360deg) scale(1.15)} 100%{transform:rotate(720deg) scale(1)} }
+    @keyframes spinB { 0%{transform:rotate(0) scale(1)} 50%{transform:rotate(360deg) scale(1.15)} 100%{transform:rotate(720deg) scale(1)} }
+    @media (prefers-reduced-motion:reduce) { .anim { animation:none !important; } }
+    header { max-width:1120px; width:100%; margin:0 auto; padding:28px 24px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+    .topname { font-size:20px; font-weight:700; }
+    .btn { transition:transform .2s; }
+    .outline-btn { min-height:44px; padding:0 22px; display:inline-flex; align-items:center; border:2px solid var(--white); color:var(--white); border-radius:999px; font-weight:700; font-size:16px; }
+    .hero { max-width:1120px; width:100%; margin:0 auto; padding:72px 24px 88px; display:flex; flex-direction:column; gap:28px; }
+    .avatar { width:200px; height:200px; border-radius:50%; object-fit:cover; display:block; border:4px solid var(--accent); box-shadow:8px 8px 0 var(--pink); animation:floatY 3.5s ease-in-out infinite; }
+    .eyebrow { font-size:18px; font-weight:500; color:var(--pink); }
+    h1 { margin:0; font-size:clamp(44px,11vw,132px); line-height:1; font-weight:700; letter-spacing:-.02em; word-break:break-word; text-shadow:4px 4px 0 var(--pink),-4px -4px 0 var(--accent); }
+    .intro { margin:0; max-width:620px; font-size:24px; line-height:1.4; color:var(--soft); }
+    .hero-actions { display:flex; gap:16px; flex-wrap:wrap; margin-top:12px; }
+    .primary-btn { min-height:56px; padding:0 32px; display:inline-flex; align-items:center; gap:12px; background:var(--accent); color:var(--bg); border-radius:999px; font-weight:700; font-size:20px; }
+    .content { max-width:1120px; width:100%; margin:0 auto; padding:24px 24px 96px; display:flex; flex-direction:column; gap:32px; }
+    h2 { margin:0; font-size:clamp(30px,5vw,48px); line-height:1.1; }
+    .numbers { display:flex; gap:14px; flex-wrap:wrap; }
+    .number { width:64px; height:64px; border-radius:50%; border:2px solid var(--white); font-size:28px; font-weight:700; cursor:pointer; background:var(--panel); color:var(--white); }
+    .number.selected { background:var(--accent); color:var(--bg); }
+    .game-open-btn { height:64px; padding:0 28px; border-radius:999px; border:2px solid var(--pink); font-size:20px; font-weight:700; cursor:pointer; background:var(--pink); color:var(--bg); }
+    .message { min-height:280px; padding:40px; background:var(--panel); border-radius:24px; border:2px solid var(--line); display:flex; gap:40px; align-items:center; flex-wrap:wrap; }
+    .message.empty { color:var(--muted); font-size:24px; }
+    .big-number { font-size:clamp(96px,20vw,180px); line-height:1; font-weight:700; color:var(--white); text-shadow:4px 4px 0 var(--pink),-4px -4px 0 var(--accent); }
+    .message-copy { flex:1 1 280px; display:flex; flex-direction:column; gap:14px; }
+    .message-copy h3 { margin:0; font-size:clamp(30px,5vw,44px); line-height:1.1; color:var(--accent); }
+    .message-copy p { margin:0; font-size:22px; line-height:1.5; color:var(--soft); }
+    .game { padding:40px; background:var(--panel); border-radius:24px; border:2px solid var(--pink); display:flex; gap:40px; align-items:center; flex-wrap:wrap; animation:gameIn .6s cubic-bezier(.2,1.2,.4,1) both; }
+    .pug-wrap { position:relative; width:200px; height:200px; flex:none; }
+    .game-avatar { width:200px; height:200px; border-radius:50%; object-fit:cover; display:block; border:4px solid var(--accent); }
+    .game-copy { flex:1 1 280px; display:flex; flex-direction:column; gap:16px; }
+    .game-copy h3 { margin:0; font-size:clamp(30px,5vw,44px); line-height:1.1; color:var(--accent); }
+    .game-copy p { margin:0; font-size:22px; line-height:1.4; color:var(--soft); }
+    .progress { height:16px; background:var(--bg); border-radius:999px; overflow:hidden; border:2px solid var(--line); }
+    .progress > div { height:100%; width:0; background:var(--pink); transition:width .3s; }
+    .score-text { font-size:18px; color:var(--muted); }
+    .game-actions { display:flex; gap:12px; flex-wrap:wrap; }
+    .feed-btn,.plain-btn { min-height:56px; padding:0 28px; border-radius:999px; font-size:20px; font-weight:700; cursor:pointer; }
+    .feed-btn { border:0; background:var(--accent); color:var(--bg); }
+    .plain-btn { padding:0 24px; border:2px solid var(--white); background:transparent; color:var(--white); font-size:18px; }
+    .why { background:var(--panel); padding:80px 24px; }
+    .why-inner { max-width:1120px; margin:0 auto; display:flex; flex-direction:column; gap:40px; }
+    .feature-list { display:flex; gap:24px; flex-wrap:wrap; }
+    .feature { flex:1 1 280px; padding:32px; background:var(--bg); border-radius:20px; border:2px solid var(--line); display:flex; flex-direction:column; gap:14px; }
+    .feature-num { font-size:44px; font-weight:700; color:var(--accent); }
+    .feature:nth-child(2) .feature-num { color:var(--pink); }
+    .feature h3 { margin:0; font-size:24px; }
+    .feature p { margin:0; font-size:18px; line-height:1.5; color:#D0D0DA; }
+    .join { max-width:1120px; width:100%; margin:0 auto; padding:96px 24px; display:flex; flex-direction:column; align-items:flex-start; gap:24px; }
+    .join h2 { font-size:clamp(34px,6vw,64px); line-height:1.05; max-width:760px; }
+    .join-btn { min-height:56px; padding:0 32px; display:inline-flex; align-items:center; background:var(--pink); color:var(--bg); border-radius:999px; font-weight:700; font-size:20px; }
+    footer { margin-top:auto; padding:32px 24px; border-top:2px solid var(--line); text-align:center; font-size:16px; color:var(--muted); }
+    .hidden { display:none !important; }
+    @media (max-width:600px) {
+      .hero { padding-top:56px; }
+      .intro { font-size:21px; }
+      .message,.game { padding:24px; gap:24px; }
+      .why { padding:64px 24px; }
+      .join { padding:72px 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="topname">@mops1234567</div>
+    <a class="btn outline-btn" href="https://www.tiktok.com/@mops1234567" target="_blank" rel="noopener noreferrer">Открыть TikTok</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img class="avatar anim" src="assets/avatar.png" alt="Аватарка канала: улыбающийся мопс за деревянной табличкой">
+      <div class="eyebrow">Мой канал в TikTok</div>
+      <h1>mops1234567</h1>
+      <p class="intro">Короткие видео, после которых хочется ещё. Подписывайся, чтобы ничего не пропустить.</p>
+      <div class="hero-actions">
+        <a class="btn primary-btn" href="https://www.tiktok.com/@mops1234567" target="_blank" rel="noopener noreferrer">
+          Смотреть в TikTok
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0B0B10" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+        </a>
+      </div>
+    </section>
+
+    <section class="content">
+      <h2>Нажми на цифру</h2>
+      <div class="numbers" id="numbers">
+        <button class="numbtn number" type="button" data-num="1">1</button>
+        <button class="numbtn number" type="button" data-num="2">2</button>
+        <button class="numbtn number" type="button" data-num="3">3</button>
+        <button class="numbtn number" type="button" data-num="4">4</button>
+        <button class="numbtn number" type="button" data-num="5">5</button>
+        <button class="numbtn number" type="button" data-num="6">6</button>
+        <button class="numbtn number" type="button" data-num="7">7</button>
+        <button class="numbtn game-open-btn" id="openGame" type="button">Играть в игру</button>
+      </div>
+      <div class="message empty" id="message" aria-live="polite">Выбери любую цифру от 1 до 7, и здесь появится сообщение.</div>
+      <div class="game hidden" id="game">
+        <div class="pug-wrap">
+          <img class="game-avatar" id="gameAvatar" src="assets/avatar.png" alt="Мопс, которого нужно накормить">
+          <svg id="bone" class="hidden" width="56" height="56" viewBox="0 0 64 64" aria-hidden="true" style="position:absolute;left:72px;top:72px;"><g fill="#FFFFFF"><rect x="14" y="26" width="36" height="12" rx="3"></rect><circle cx="14" cy="24" r="7"></circle><circle cx="14" cy="40" r="7"></circle><circle cx="50" cy="24" r="7"></circle><circle cx="50" cy="40" r="7"></circle></g></svg>
+          <div id="sparks"></div>
+        </div>
+        <div class="game-copy">
+          <h3>Накорми мопса</h3>
+          <p id="mood" aria-live="polite">Мопс голоден и смотрит на тебя. Нажми «Накормить».</p>
+          <div class="progress" role="progressbar" aria-label="Сытость" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" id="progress"><div id="progressBar"></div></div>
+          <div class="score-text" id="scoreText">Накормлено: 0 из 10</div>
+          <div class="game-actions">
+            <button class="numbtn feed-btn" id="feed" type="button">Накормить</button>
+            <button class="numbtn plain-btn" id="resetGame" type="button">Заново</button>
+            <button class="numbtn plain-btn" id="closeGame" type="button">Закрыть</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="why">
+      <div class="why-inner">
+        <h2>Почему стоит подписаться</h2>
+        <div class="feature-list">
+          <div class="feature">
+            <div class="feature-num">01</div>
+            <h3>Новые видео</h3>
+            <p>Свежие ролики на канале. Подписка, и они первыми появятся в твоей ленте.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-num">02</div>
+            <h3>Коротко и весело</h3>
+            <p>Несколько секунд, чтобы поднять настроение. Идеально для перерыва.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-num">03</div>
+            <h3>Общайся со мной</h3>
+            <p>Пиши комментарии, делись видео с друзьями и предлагай идеи для новых.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="join">
+      <h2>Присоединяйся к <span style="color:#FE2C55;">mops1234567</span> уже сегодня</h2>
+      <a class="btn join-btn" href="https://www.tiktok.com/@mops1234567" target="_blank" rel="noopener noreferrer">Подписаться в TikTok</a>
+    </section>
+  </main>
+
+  <footer>@mops1234567 · TikTok</footer>
+
+  <script>
+    const messages = [
+      { title:'Подписывайся', text:'Нажми «Подписаться», и новые видео mops1234567 будут появляться в твоей ленте.' },
+      { title:'Смотри', text:'Короткие ролики, которые можно посмотреть за пару секунд.' },
+      { title:'Ставь лайк', text:'Понравилось видео? Лайк помогает каналу расти.' },
+      { title:'Комментируй', text:'Напиши, что думаешь, или предложи идею для следующего видео.' },
+      { title:'Делись', text:'Отправь видео другу, которому оно точно понравится.' },
+      { title:'Возвращайся', text:'Заглядывай на канал почаще, чтобы не пропустить новые видео.' },
+      { title:'Следи за новым', text:'Включи уведомления и узнавай о новых видео первым.' }
+    ];
+    let selected = 0, tick = 0, score = 0, gameTick = 0;
+    const message = document.getElementById('message');
+    const numberButtons = [...document.querySelectorAll('[data-num]')];
+    function chooseNumber(n) {
+      selected = n; tick++;
+      numberButtons.forEach(b => {
+        const active = Number(b.dataset.num) === n;
+        b.classList.toggle('selected', active);
+        b.style.animation = active ? `btn${tick % 2 ? 'B' : 'A'} .5s ease-out both` : 'none';
+        b.setAttribute('aria-pressed', String(active));
+      });
+      const item = messages[n - 1];
+      message.className = 'message';
+      message.innerHTML = `<div class="big-number anim" style="animation:num${tick % 2 ? 'B' : 'A'} .7s cubic-bezier(.2,1.3,.4,1) both">${n}</div><div class="message-copy"><h3 class="anim" style="animation:up${tick % 2 ? 'B' : 'A'} .5s .15s ease-out both">${item.title}</h3><p class="anim" style="animation:fade${tick % 2 ? 'B' : 'A'} .6s .35s ease-out both">${item.text}</p></div>`;
+      document.getElementById('game').classList.add('hidden');
+    }
+    numberButtons.forEach(b => b.addEventListener('click', () => chooseNumber(Number(b.dataset.num))));
+
+    const game = document.getElementById('game');
+    const gameAvatar = document.getElementById('gameAvatar');
+    const mood = document.getElementById('mood');
+    const scoreText = document.getElementById('scoreText');
+    const progress = document.getElementById('progress');
+    const progressBar = document.getElementById('progressBar');
+    const feedButton = document.getElementById('feed');
+    const bone = document.getElementById('bone');
+    const sparks = document.getElementById('sparks');
+
+    function updateGame() {
+      const full = score >= 10;
+      mood.textContent = full ? 'Мопс сыт и счастлив! Спасибо!' :
+        score >= 7 ? 'Почти сыт, ещё чуть-чуть!' :
+        score >= 4 ? 'Мопс довольно жуёт.' :
+        score >= 1 ? 'Ням-ням! Ещё косточку?' :
+        'Мопс голоден и смотрит на тебя. Нажми «Накормить».';
+      scoreText.textContent = `Накормлено: ${score} из 10`;
+      progressBar.style.width = `${score * 10}%`;
+      progress.setAttribute('aria-valuenow', String(score));
+      feedButton.textContent = full ? 'Мопс сыт' : 'Накормить';
+      feedButton.style.background = full ? '#B8B8C6' : 'var(--accent)';
+      gameAvatar.style.animation = full ? 'dance 1s ease-in-out infinite' :
+        score === 0 ? 'none' : `chomp${gameTick % 2 ? 'B' : 'A'} .45s ease-out both`;
+      if (score > 0) {
+        bone.classList.remove('hidden');
+        bone.style.animation = `fly${gameTick % 2 ? 'B' : 'A'} .6s ease-in both`;
+      } else {
+        bone.classList.add('hidden');
+      }
+      sparks.innerHTML = '';
+      if (full) {
+        for (let i = 0; i < 16; i++) {
+          const s = document.createElement('div');
+          const angle = i % 8 + 1;
+          s.style.cssText = `position:absolute;left:93px;top:93px;width:14px;height:14px;border-radius:50%;opacity:0;background:${['#25F4EE','#FE2C55','#FFFFFF','#FFD60A'][i%4]};animation:burst${angle} 1.2s ease-out ${i>=8?'.6s':'0s'} infinite both`;
+          sparks.appendChild(s);
+        }
+      }
+    }
+    document.getElementById('openGame').addEventListener('click', () => {
+      selected = 0;
+      numberButtons.forEach(b => { b.classList.remove('selected'); b.setAttribute('aria-pressed','false'); });
+      message.className = 'message empty';
+      message.textContent = 'Выбери любую цифру от 1 до 7, и здесь появится сообщение.';
+      game.classList.remove('hidden');
+      score = 0; gameTick = 0; updateGame();
+    });
+    feedButton.addEventListener('click', () => {
+      if (score >= 10) return;
+      score++; gameTick++; updateGame();
+    });
+    document.getElementById('resetGame').addEventListener('click', () => {
+      score = 0; gameTick = 0; updateGame();
+    });
+    document.getElementById('closeGame').addEventListener('click', () => game.classList.add('hidden'));
+  </script>
+</body>
+</html>
